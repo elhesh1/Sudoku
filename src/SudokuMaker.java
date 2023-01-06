@@ -113,8 +113,8 @@ public class SudokuMaker {
         return false;
     }
 
-    public void removeKDigits() {
-        int count = 50;
+    public void removeKDigits(int K) {
+        int count = K;
         while (count != 0) {
             int i = randomGenerator(9) - 1;
             int j = randomGenerator(9) - 1;
@@ -137,12 +137,12 @@ public class SudokuMaker {
 
 
     public static void easyTest(int newK) {
-        int N = 9, K = newK;
-        SudokuMaker sudoku = new SudokuMaker(N,K);
+        int N = 9;
+        SudokuMaker sudoku = new SudokuMaker(N,newK);
         sudoku.fillValues();
         SudokuSolver.solveBoardFast(mat);
         SudokuSolver.printBoard(mat);
-        sudoku.removeKDigits();
+        sudoku.removeKDigits(newK);
 
     }
 }

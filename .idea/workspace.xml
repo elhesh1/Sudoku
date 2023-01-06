@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SudukoForReal.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SudokuMaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SudokuRandomizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SudokuSolver.java" afterDir="false" />
+    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="Just a casual commit. I made easy solver - slow and quick all work. Trying to commit to GitHub">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Notes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SudokuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SudokuMaker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +72,26 @@
       <option name="presentableId" value="Default" />
       <updated>1672517712005</updated>
     </task>
+    <task id="LOCAL-00001" summary="Just a casual commit. I made easy solver - slow and quick all work.">
+      <created>1672981167721</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672981167721</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Just a casual commit. I made easy solver - slow and quick all work. Trying to commit to GitHub">
+      <created>1672981620238</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672981620238</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Just a casual commit. I made easy solver - slow and quick all work." />
+    <MESSAGE value="Just a casual commit. I made easy solver - slow and quick all work. Trying to commit to GitHub" />
+    <option name="LAST_COMMIT_MESSAGE" value="Just a casual commit. I made easy solver - slow and quick all work. Trying to commit to GitHub" />
   </component>
 </project>
