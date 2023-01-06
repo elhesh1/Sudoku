@@ -24,7 +24,7 @@ public class SudokuSolver {
 
         printBoard(board);
 
-        if (solveBoard(board)) {
+        if (solveBoard(board,0)) {
             System.out.println("Solved successfully!");
         }
         else {
@@ -82,7 +82,9 @@ public class SudokuSolver {
 
     }
 
-    public static boolean solveBoard(int[][] board) {
+    public static boolean solveBoard(int[][] board,int a) {
+        MainFrame.checker.setText("");
+
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int column = 0; column < GRID_SIZE; column++) {
                 if (board[row][column] == 0) {
@@ -91,19 +93,18 @@ public class SudokuSolver {
                             board[row][column] = numberToTry;
                             MainFrame.setUpCurrentSlow();
                             try {
-                                Thread.sleep(50);
+                                Thread.sleep(a);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
 
                             // printBoard(board);
 
-                            if (solveBoard(board)) {
+                            if (solveBoard(board,a)) {
                                 return true;
                             }
                             else {
                                 board[row][column] = 0;
-                                //  printBoard(board);
 
                             }
                         }
@@ -129,7 +130,7 @@ public class SudokuSolver {
 
 
     public static boolean solveBoardFast(int[][] board) {
-
+       // MainFrame.checker.setText("Solved!!!!!");
 
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int column = 0; column < GRID_SIZE; column++) {

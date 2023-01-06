@@ -17,7 +17,7 @@ public class MainFrame extends JFrame {
    public static int[][] currentBoard = new int[9][9];
    public static int[][] currentPreSolve = new int[9][9];
    private static int[][] currentPreToSolve = new int[9][9];
-   private static TextField checker;
+   public static TextField checker;
 
     private static TextField text00;
     private static TextField text10;
@@ -124,16 +124,19 @@ public class MainFrame extends JFrame {
      greePanel.setLayout(null);
      greePanel.setBackground(Color.white);
      greePanel.setBounds(470, 0, 200, 500);
-     JButton button = new JButton();
-     button.setBounds(10, 300, 150, 20);
 
      TextField topper = new TextField(50);           //Header
-     topper.setBounds(10,10,150,20);
+     topper.setBounds(10,10,150,30);
      greePanel.add(topper);
+     topper.setText(" Current Board");
+     topper.setEditable(false);
+     topper.setFont(new Font("Serif",Font.BOLD,20));
+
 
      JButton currentEasy = new JButton();                    //Reset to Current
-     currentEasy.setBounds(10, 70, 150, 20);
+     currentEasy.setBounds(10, 45, 150, 20);
      currentEasy.setText("Reset to Current Board");
+     currentEasy.setFont(new Font("Dialog",Font.BOLD,10));
      currentEasy.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
@@ -143,75 +146,86 @@ public class MainFrame extends JFrame {
      });
      greePanel.add(currentEasy);
 
-     JButton solve = new JButton();                       //Slow Solve
-     solve.setBounds(10, 100, 150, 20);
-     solve.setText("Slow Solve");
+     JButton solve = new JButton();                       //Very Slow Solve
+     solve.setBounds(10, 70, 150, 20);
+     solve.setText("Very Slow Solve");
      solve.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-       for (int i = 0;  i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
-         currentPreToSolve[i][j] = currentPreSolve[i][j];
-        }
-       }
-       SudokuSolver.solveBoard(currentPreToSolve);
+       setUp(75);
       }
      });
      greePanel.add(solve);
 
-
-
-     checker = new TextField(150);
-     checker.setText("CHECKING OUT PUT");
-     checker.setBounds(10,240,150,20);
-    greePanel.add(checker);
-
-     button.setText("Empty Board");
-     button.addActionListener(new ActionListener() {
+     JButton solvee = new JButton();                       //Slow Solve
+     solvee.setBounds(10, 95, 150, 20);
+     solvee.setText("Slow Solve");
+     solvee.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-       emptyTheBoard();
-       System.out.println("BUTTON WORKS!");
+       setUp(1);
       }
      });
-     greePanel.add(button);
+     greePanel.add(solvee);
 
-
-
-
-
+     JButton quickSolve = new JButton();                     // Instant Solve
+     quickSolve.setBounds(10, 120, 150, 20);
+     quickSolve.setText("Instant Solve");
+     quickSolve.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+       SudokuSolver.solveBoardFast(currentBoard);
+       MainFrame.setUpCurrent();
+      }
+     });
+     greePanel.add(quickSolve);
 
      JButton check = new JButton();
-     check.setBounds(10, 210, 150, 20);
-     check.setText("Check");
+     check.setBounds(10, 145, 150, 20);
+     check.setText("Check Current Board");
+     check.setFont(new Font("Dialog",Font.BOLD,10));
      check.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
        TextField[][] textFormat = grid();
-      int cap = 0;
-      int broken = 0;
+       int cap = 0;
+       int broken = 0;
        Set<String> set = new HashSet<>();
        broken:
-      for (int i = 0; i < 9; i++) {
-       for (int j = 0; j < 9; j++) {
-        try {
-         char cur = textFormat[i][j].getText().charAt(0);
-         if (!set.add("row" + i + cur) || !set.add("col" + j + cur) || !set.add("grid" + cur + i / 3 + j / 3)) {
-          cap++;
+       for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+         try {
+          char cur = textFormat[i][j].getText().charAt(0);
+          if (!set.add("row" + i + cur) || !set.add("col" + j + cur) || !set.add("grid" + cur + i / 3 + j / 3)) {
+           cap++;
+          }
+         } catch (Exception eeee) {
+          checker.setText("Not Solved. Error");
+          broken = 1;
+          break broken;
          }
-        } catch (Exception eeee) {
-         System.out.println("No Good");
-         broken = 1;
-         break broken;
         }
        }
-      }
-      if (cap == 0 && broken == 0) {
-       System.out.println("FR");
-      }
+       if (cap == 0 && broken == 0) {
+        checker.setText("Solved!!!!!");
+       } else {
+        checker.setText("Not Solved :(");
+       }
       }
      });
      greePanel.add(check);
+
+     checker = new TextField(150);
+     checker.setEditable(false);
+     checker.setBounds(10,170,150,20);
+    greePanel.add(checker);
+
+     TextField middle = new TextField(50);           //Second Header
+     middle.setBounds(10,245,150,24);
+     greePanel.add(middle);
+     middle.setText("New Random Board");
+     middle.setEditable(false);
+     middle.setFont(new Font("Serif",Font.BOLD,16));
 
      JButton easy = new JButton();
      easy.setBounds(10, 270, 150, 20);
@@ -225,11 +239,21 @@ public class MainFrame extends JFrame {
      });
      greePanel.add(easy);
 
+     JButton medium = new JButton();
+     medium.setBounds(10, 295, 150, 20);
+     medium.setText("Medium Board");
+     medium.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+       setUpEasyy(54);
 
+      }
+     });
+     greePanel.add(medium);
 
 
      JButton hard = new JButton();
-     hard.setBounds(10, 330, 150, 20);
+     hard.setBounds(10, 320, 150, 20);
      hard.setText("Hard Board");
      hard.addActionListener(new ActionListener() {
       @Override
@@ -240,22 +264,16 @@ public class MainFrame extends JFrame {
      });
      greePanel.add(hard);
 
-
-
-
-
-
-     JButton quickSolve = new JButton();
-     quickSolve.setBounds(10, 150, 150, 20);
-     quickSolve.setText("Quick Solve");
-     quickSolve.addActionListener(new ActionListener() {
+     JButton button = new JButton();
+     button.setBounds(10, 345, 150, 20);
+     button.setText("Empty Board");
+     button.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-       SudokuSolver.solveBoardFast(currentBoard);
-       MainFrame.setUpCurrent();
+       emptyTheBoard();
       }
      });
-     greePanel.add(quickSolve);
+     greePanel.add(button);
 
 
      //This should be how I can get to see all the cells
@@ -499,31 +517,13 @@ public class MainFrame extends JFrame {
      frame.add(Outline);
      frame.setVisible(true);
 
+     setUpEasyy(50); // Sets up initial board
+
     }
-
-
-
-
-// public static void setUpBasic() {
-//  TextField[][] myTextFields = grid();
-//  for (int i = 0; i < 9; i++) {
-//   for (int j = 0; j < 9; j++) {
-//    if (SudokuSolver.board[i][j] > 0) {
-//     myTextFields[i][j].setText(Integer.toString(SudokuSolver.board[i][j]));
-//    myTextFields[i][j].setEditable(false);
-//    } else {
-//     myTextFields[i][j].setText("");
-//     myTextFields[i][j].setEditable(true);
-//    }
-//   }
-//  }
-// }
 
 
  public static void setUpCurrent() {
   TextField[][] myTextFields = grid();
-  SudokuSolver.printBoard(currentPreSolve);
-  System.out.println("This is start of Set Up Current^  ");  //BAD NOT GOOD
   for (int i = 0; i < 9; i++) {
    for (int j = 0; j < 9; j++) {
     if (currentBoard[i][j] > 0) {
@@ -539,8 +539,6 @@ public class MainFrame extends JFrame {
 
  public static void setUpCurrentSlow() {
   TextField[][] myTextFields = grid();
-  SudokuSolver.printBoard(currentPreToSolve);
-  System.out.println("This is start of Set Up Current^  ");  //BAD NOT GOOD
   for (int i = 0; i < 9; i++) {
    for (int j = 0; j < 9; j++) {
     if (currentPreToSolve[i][j] > 0) {
@@ -572,10 +570,10 @@ public class MainFrame extends JFrame {
  }
 
  public static void setUpEasyy(int k) {
+     checker.setText("");
   SudokuMaker.easyTest(k);
   TextField[][] myTextFields = grid();
   int[][] tester = SudokuMaker.mat;
-  //currentPreSolve = tester;
   for (int i = 0; i < 9; i++) {
    for (int j = 0; j < 9; j++) {
     if (tester[i][j] > 0) {
@@ -604,6 +602,7 @@ public class MainFrame extends JFrame {
 
 
  public static void emptyTheBoard()  {
+     checker.setText("");
       System.out.println("Emptying!");
       System.out.println(text00);
       TextField[][] myTextFields = grid();
@@ -613,6 +612,16 @@ public class MainFrame extends JFrame {
            myTextFields[i][j].setEditable(true);
           }
       }
+   }
+
+   public static void setUp(int a) {
+    for (int i = 0;  i < 9; i++) {
+     for (int j = 0; j < 9; j++) {
+      currentPreToSolve[i][j] = currentPreSolve[i][j];
+     }
+    }
+    SudokuSolver.solveBoard(currentPreToSolve,a);
+
    }
 
    public static TextField[][] grid() {
