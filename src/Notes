@@ -1,0 +1,119 @@
+  To Do:
+  Make random boards
+  Solveboards
+
+
+
+
+
+  Probably useless code - saving here so out of the way
+
+
+   if(SudokuSolver.board[0][0] != 0) {
+          text00.setText(Integer.toString(SudokuSolver.board[0][0]));
+          text00.setEditable(false);
+      }
+       if(SudokuSolver.board[0][1] != 0) {
+           text10.setText(Integer.toString(SudokuSolver.board[0][1]));
+           text10.setEditable(false);
+       }
+       if(SudokuSolver.board[0][2] != 0) {
+           text20.setText(Integer.toString(SudokuSolver.board[0][2]));
+           text20.setEditable(false);
+       }
+       if(SudokuSolver.board[1][0] != 0) {
+           text01.setText(Integer.toString(SudokuSolver.board[1][0]));
+           text01.setEditable(false);
+       }
+       if(SudokuSolver.board[1][1] != 0) {
+           text11.setText(Integer.toString(SudokuSolver.board[1][1]));
+           text11.setEditable(false);
+       }
+       if(SudokuSolver.board[1][2] != 0) {
+           text21.setText(Integer.toString(SudokuSolver.board[1][2]));
+           text21.setEditable(false);
+       }
+       if(SudokuSolver.board[2][2] != 0) {
+           text22.setText(Integer.toString(SudokuSolver.board[2][2]));
+           text22.setEditable(false);
+       }
+       if(SudokuSolver.board[2][1] != 0) {
+           text12.setText(Integer.toString(SudokuSolver.board[2][1]));
+           text12.setEditable(false);
+       }
+       if(SudokuSolver.board[2][0] != 0) {
+           text02.setText(Integer.toString(SudokuSolver.board[2][0]));
+           text02.setEditable(false);
+       }
+       if(SudokuSolver.board[3][0] != 0) {
+           text03.setText(Integer.toString(SudokuSolver.board[3][0]));
+           text03.setEditable(false);
+       }
+       if(SudokuSolver.board[3][1] != 0) {
+           text13.setText(Integer.toString(SudokuSolver.board[3][1]));
+           text13.setEditable(false);
+       }
+       if(SudokuSolver.board[3][2] != 0) {
+           text23.setText(Integer.toString(SudokuSolver.board[3][2]));
+           text23.setEditable(false);
+       }
+       if(SudokuSolver.board[4][0] != 0) {
+           text04.setText(Integer.toString(SudokuSolver.board[4][0]));
+           text04.setEditable(false);
+       }
+       if(SudokuSolver.board[4][1] != 0) {
+           text14.setText(Integer.toString(SudokuSolver.board[4][1]));
+           text14.setEditable(false);
+       }
+       if(SudokuSolver.board[4][2] != 0) {
+           text24.setText(Integer.toString(SudokuSolver.board[4][2]));
+           text24.setEditable(false);
+       }
+       if(SudokuSolver.board[5][2] != 0) {
+           text25.setText(Integer.toString(SudokuSolver.board[5][2]));
+           text25.setEditable(false);
+       }
+       if(SudokuSolver.board[5][1] != 0) {
+           text15.setText(Integer.toString(SudokuSolver.board[5][1]));
+           text15.setEditable(false);
+       }
+       if(SudokuSolver.board[5][0] != 0) {
+           text05.setText(Integer.toString(SudokuSolver.board[5][0]));
+           text05.setEditable(false);
+       }
+       if(SudokuSolver.board[6][0] != 0) {
+           text06.setText(Integer.toString(SudokuSolver.board[6][0]));
+           text06.setEditable(false);
+       }
+       if(SudokuSolver.board[6][1] != 0) {
+           text16.setText(Integer.toString(SudokuSolver.board[6][1]));
+           text16.setEditable(false);
+       }
+       if(SudokuSolver.board[6][2] != 0) {
+           text26.setText(Integer.toString(SudokuSolver.board[6][2]));
+           text26.setEditable(false);
+       }
+       if(SudokuSolver.board[7][0] != 0) {
+           text07.setText(Integer.toString(SudokuSolver.board[7][0]));
+           text07.setEditable(false);
+       }
+       if(SudokuSolver.board[7][1] != 0) {
+           text17.setText(Integer.toString(SudokuSolver.board[7][1]));
+           text17.setEditable(false);
+       }
+       if(SudokuSolver.board[7][2] != 0) {
+           text27.setText(Integer.toString(SudokuSolver.board[7][2]));
+           text27.setEditable(false);
+       }
+       if(SudokuSolver.board[8][2] != 0) {
+           text28.setText(Integer.toString(SudokuSolver.board[8][2]));
+           text28.setEditable(false);
+       }
+       if(SudokuSolver.board[8][1] != 0) {
+           text18.setText(Integer.toString(SudokuSolver.board[8][1]));
+           text18.setEditable(false);
+       }
+       if(SudokuSolver.board[8][0] != 0) {
+           text08.setText(Integer.toString(SudokuSolver.board[8][0]));
+           text08.setEditable(false);
+       }
