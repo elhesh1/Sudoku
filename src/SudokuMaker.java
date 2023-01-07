@@ -52,26 +52,9 @@ public class SudokuMaker {
     }
 
     boolean CheckIfSafe(int i, int j, int num) {
-        return (unUsedInRow(i,num) && unUsedInCol(j, num) && unUsedInBox(i-i%SRN, j-j%SRN, num));
+        return (!(SudokuSolver.isNumberInRow(mat,num,i)) && !(SudokuSolver.isNumberInColumn(mat,num,j )) && !(SudokuSolver.isNumberInBox(mat,num,i,j)));
     }
 
-    boolean unUsedInRow(int i, int num) {
-        for (int j = 0; j < N; j++) {
-            if (mat[i][j] == num) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    boolean unUsedInCol(int j, int num) {
-        for (int i = 0; i < N; i++) {
-            if (mat[i][j] == num) {
-                return false;
-            }
-        }
-        return true;
-    }
 
     boolean fillRemaining(int i, int j) {
         if ( j >= N && i < N -1) {

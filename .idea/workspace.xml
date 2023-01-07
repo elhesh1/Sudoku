@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="Everything is set up and working. Still have to do a bit of cleaning.&#10;Before Changing array setups">
+    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="Added Lambda Functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SudokuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SudokuMaker.java" afterDir="false" />
@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673045293237</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Lambda Functions">
+      <created>1673057089127</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673057089127</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -109,6 +116,7 @@
     <MESSAGE value="Everything but medium and button set up done." />
     <MESSAGE value="Everything is set up and working. Still have to do a bit of cleaning." />
     <MESSAGE value="Everything is set up and working. Still have to do a bit of cleaning.&#10;Before Changing array setups" />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything is set up and working. Still have to do a bit of cleaning.&#10;Before Changing array setups" />
+    <MESSAGE value="Added Lambda Functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Lambda Functions" />
   </component>
 </project>

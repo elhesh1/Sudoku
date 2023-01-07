@@ -14,7 +14,7 @@ public class SudokuSolver {
         }
     }
 
-    private static boolean isNumberInRow(int[][] board, int number, int row) {
+    public static boolean isNumberInRow(int[][] board, int number, int row) {
         for (int i = 0; i < GRID_SIZE; i++) {
             if (board[row][i] == number ) {
                 return true;
@@ -23,7 +23,7 @@ public class SudokuSolver {
         return false;
     }
 
-    private static boolean isNumberInColumn(int[][] board, int number, int col) {
+    public static boolean isNumberInColumn(int[][] board, int number, int col) {
         for (int i = 0; i < GRID_SIZE; i++) {
             if (board[i][col] == number ) {
                 return true;
@@ -32,7 +32,7 @@ public class SudokuSolver {
         return false;
     }
 
-    private static boolean isNumberInBox(int[][] board, int number, int row, int col) {
+    public static boolean isNumberInBox(int[][] board, int number, int row, int col) {
         int localBoxRow = row - row % 3;
         int localBoxCol = col - col % 3;
         for (int i = localBoxRow; i < localBoxRow + 3; i++) {

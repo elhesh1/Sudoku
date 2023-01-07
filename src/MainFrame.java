@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,6 +9,7 @@ public class MainFrame extends JFrame {
    public static int[][] currentPreSolve = new int[9][9];
    private static final int[][] currentPreToSolve = new int[9][9];
    public static TextField checker;
+
 
     private static TextField text00;
     private static TextField text10;
@@ -94,17 +93,11 @@ public class MainFrame extends JFrame {
     private static TextField text78;
     private static TextField text88;
 
-
-
-
-
     public static void main(String[] args) {
-
 
      JPanel Outline = new JPanel();  //JPanel  Black Outline
      Outline.setBackground(Color.black);
      Outline.setBounds(0, 0, 470, 500);
-
 
      JFrame frame = new JFrame();          //JFrame stuff
      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -124,7 +117,6 @@ public class MainFrame extends JFrame {
      topper.setText(" Current Board");
      topper.setEditable(false);
      topper.setFont(new Font("Serif",Font.BOLD,20));
-
 
      JButton currentEasy = new JButton();                    //Reset to Current
      currentEasy.setBounds(10, 45, 150, 20);
@@ -213,7 +205,6 @@ public class MainFrame extends JFrame {
      medium.addActionListener(e -> setUpEasyy(54));
      greePanel.add(medium);
 
-
      JButton hard = new JButton();
      hard.setBounds(10, 320, 150, 20);
      hard.setText("Hard Board");
@@ -225,7 +216,6 @@ public class MainFrame extends JFrame {
      button.setText("Empty Board");
      button.addActionListener(e -> emptyTheBoard());
      greePanel.add(button);
-
 
      //This should be how I can get to see all the cells
 
@@ -421,29 +411,26 @@ public class MainFrame extends JFrame {
      panellllllllll.add(text85);
      frame.add(panellllllllll);
 
-     JPanel panelllllllllll = new JPanel();
-     panelllllllllll.setOpaque(false);
-     panelllllllllll.setLayout(new GridLayout(3, 3, 3, 3));
-     panelllllllllll.setBounds(315, 315, 150, 150);
+     JPanel panel9 = new JPanel();
+     panel9.setOpaque(false);
+     panel9.setLayout(new GridLayout(3, 3, 3, 3));
+     panel9.setBounds(315, 315, 150, 150);
      text66 = new TextField(10);
-     panelllllllllll.add(text66);
      text76 = new TextField(10);
-     panelllllllllll.add(text76);
      text86 = new TextField(10);
-     panelllllllllll.add(text86);
      text67 = new TextField(10);
-     panelllllllllll.add(text67);
      text77 = new TextField(10);
-     panelllllllllll.add(text77);
      text87 = new TextField(10);
-     panelllllllllll.add(text87);
      text68 = new TextField(10);
-     panelllllllllll.add(text68);
      text78 = new TextField(10);
-     panelllllllllll.add(text78);
      text88 = new TextField(10);
-     panelllllllllll.add(text88);
-     frame.add(panelllllllllll);
+
+     TextField[] ninthSquare = {text66,text76,text86,text67,text77,text87,text68,text78,text88};
+     for (TextField x: ninthSquare) {
+    //  x = new TextField(10);
+      panel9.add(x);
+    }
+    frame.add(panel9);
 
 
      TextField[][] textFormat = grid();
@@ -505,7 +492,6 @@ public class MainFrame extends JFrame {
 
  public static void setUpOG() {
   TextField[][] myTextFields = grid();
-  System.out.println("FRFRFR OG");
   SudokuSolver.printBoard(currentPreSolve);
   for (int i = 0; i < 9; i++) {
    for (int j = 0; j < 9; j++) {
