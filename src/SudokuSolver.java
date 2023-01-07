@@ -1,37 +1,8 @@
-import java.util.HashSet;
-import java.util.Random;
-
 public class SudokuSolver {
 
     private static final int GRID_SIZE = 9;
-    public static int add() {
-        return 5;
-    }
 
-    public static int[][] board = {
-            {7, 0, 2, 0, 5, 0, 6, 0, 0},
-            {0, 0, 0, 0, 0, 3, 0, 0, 0},
-            {1, 0, 0, 0, 0, 9, 5, 0, 0},
-            {8, 0, 0, 0, 0, 0, 0, 9, 0},
-            {0, 4, 3, 0, 0, 0, 7, 5, 0},
-            {0, 9, 0, 0, 0, 0, 0, 0, 8},
-            {0, 0, 9, 7, 0, 0, 0, 0, 5},
-            {0, 0, 0, 2, 0, 0, 0, 0, 0},
-            {0, 0, 7, 0, 4, 0, 2, 0, 3},
-
-    };
     public static void main(String[] args) {
-
-        printBoard(board);
-
-        if (solveBoard(board,0)) {
-            System.out.println("Solved successfully!");
-        }
-        else {
-            System.out.println("Unsolvable board");
-        }
-
-        printBoard(board);
     }
 
     public static void printBoard(int[][] board) {
@@ -97,15 +68,11 @@ public class SudokuSolver {
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-
-                            // printBoard(board);
-
                             if (solveBoard(board,a)) {
                                 return true;
                             }
                             else {
                                 board[row][column] = 0;
-
                             }
                         }
                     }
@@ -114,18 +81,6 @@ public class SudokuSolver {
             }
         }
         return true;
-    }
-
-
-
-    public static int[][] validBoard = new int[9][9];
-
-    public static int[][] easyBoard() {
-        int[][] ezBoard = new int[9][9];
-        Random random = new Random();
-        int validCount = 81;
-        return ezBoard;
-
     }
 
 
@@ -152,11 +107,7 @@ public class SudokuSolver {
                 }
             }
         }
-       // MainFrame.setUpBasic();
         return true;
-
-
-
     }
 
 

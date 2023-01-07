@@ -1,22 +1,15 @@
-import com.sun.tools.javac.Main;
-
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.Flow;
-import java.util.concurrent.TimeUnit;
-import javax.swing.JPanel;
 
 public class MainFrame extends JFrame {
 
-   public static int[][] OGboard = SudokuSolver.board;
    public static int[][] currentBoard = new int[9][9];
    public static int[][] currentPreSolve = new int[9][9];
-   private static int[][] currentPreToSolve = new int[9][9];
+   private static final int[][] currentPreToSolve = new int[9][9];
    public static TextField checker;
 
     private static TextField text00;
@@ -137,46 +130,30 @@ public class MainFrame extends JFrame {
      currentEasy.setBounds(10, 45, 150, 20);
      currentEasy.setText("Reset to Current Board");
      currentEasy.setFont(new Font("Dialog",Font.BOLD,10));
-     currentEasy.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       SudokuSolver.printBoard(currentPreToSolve);
-       setUpOG();
-      }
+     currentEasy.addActionListener(e -> {
+      SudokuSolver.printBoard(currentPreToSolve);
+      setUpOG();
      });
      greePanel.add(currentEasy);
 
      JButton solve = new JButton();                       //Very Slow Solve
      solve.setBounds(10, 70, 150, 20);
      solve.setText("Very Slow Solve");
-     solve.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       setUp(75);
-      }
-     });
+     solve.addActionListener(e -> setUp(75));
      greePanel.add(solve);
 
      JButton solvee = new JButton();                       //Slow Solve
      solvee.setBounds(10, 95, 150, 20);
      solvee.setText("Slow Solve");
-     solvee.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       setUp(1);
-      }
-     });
+     solvee.addActionListener(e -> setUp(1));
      greePanel.add(solvee);
 
      JButton quickSolve = new JButton();                     // Instant Solve
      quickSolve.setBounds(10, 120, 150, 20);
      quickSolve.setText("Instant Solve");
-     quickSolve.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       SudokuSolver.solveBoardFast(currentBoard);
-       MainFrame.setUpCurrent();
-      }
+     quickSolve.addActionListener(e -> {
+      SudokuSolver.solveBoardFast(currentBoard);
+      MainFrame.setUpCurrent();
      });
      greePanel.add(quickSolve);
 
@@ -184,33 +161,30 @@ public class MainFrame extends JFrame {
      check.setBounds(10, 145, 150, 20);
      check.setText("Check Current Board");
      check.setFont(new Font("Dialog",Font.BOLD,10));
-     check.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       TextField[][] textFormat = grid();
-       int cap = 0;
-       int broken = 0;
-       Set<String> set = new HashSet<>();
-       broken:
-       for (int i = 0; i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
-         try {
-          char cur = textFormat[i][j].getText().charAt(0);
-          if (!set.add("row" + i + cur) || !set.add("col" + j + cur) || !set.add("grid" + cur + i / 3 + j / 3)) {
-           cap++;
-          }
-         } catch (Exception eeee) {
-          checker.setText("Not Solved. Error");
-          broken = 1;
-          break broken;
+     check.addActionListener(e -> {
+      TextField[][] textFormat = grid();
+      int cap = 0;
+      int broken = 0;
+      Set<String> set = new HashSet<>();
+      broken:
+      for (int i = 0; i < 9; i++) {
+       for (int j = 0; j < 9; j++) {
+        try {
+         char cur = textFormat[i][j].getText().charAt(0);
+         if (!set.add("row" + i + cur) || !set.add("col" + j + cur) || !set.add("grid" + cur + i / 3 + j / 3)) {
+          cap++;
          }
+        } catch (Exception eeee) {
+         checker.setText("Not Solved. Error");
+         broken = 1;
+         break broken;
         }
        }
-       if (cap == 0 && broken == 0) {
-        checker.setText("Solved!!!!!");
-       } else {
-        checker.setText("Not Solved :(");
-       }
+      }
+      if (cap == 0 && broken == 0) {
+       checker.setText("Solved!!!!!");
+      } else {
+       checker.setText("Not Solved :(");
       }
      });
      greePanel.add(check);
@@ -230,49 +204,26 @@ public class MainFrame extends JFrame {
      JButton easy = new JButton();
      easy.setBounds(10, 270, 150, 20);
      easy.setText("Easy Board");
-     easy.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       setUpEasyy(50);
-
-      }
-     });
+     easy.addActionListener(e -> setUpEasyy(50));
      greePanel.add(easy);
 
      JButton medium = new JButton();
      medium.setBounds(10, 295, 150, 20);
      medium.setText("Medium Board");
-     medium.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       setUpEasyy(54);
-
-      }
-     });
+     medium.addActionListener(e -> setUpEasyy(54));
      greePanel.add(medium);
 
 
      JButton hard = new JButton();
      hard.setBounds(10, 320, 150, 20);
      hard.setText("Hard Board");
-     hard.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       setUpEasyy(58);
-
-      }
-     });
+     hard.addActionListener(e -> setUpEasyy(58));
      greePanel.add(hard);
 
      JButton button = new JButton();
      button.setBounds(10, 345, 150, 20);
      button.setText("Empty Board");
-     button.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-       emptyTheBoard();
-      }
-     });
+     button.addActionListener(e -> emptyTheBoard());
      greePanel.add(button);
 
 
@@ -594,9 +545,7 @@ public class MainFrame extends JFrame {
  public static void preSolveToTester() {
      int[][] testee = SudokuMaker.mat;
      for (int i = 0;  i < 9; i++) {
-      for (int j = 0; j < 9; j++) {
-       currentPreSolve[i][j] = testee[i][j];
-      }
+      System.arraycopy(testee[i], 0, currentPreSolve[i], 0, 9);
      }
  }
 
@@ -616,28 +565,25 @@ public class MainFrame extends JFrame {
 
    public static void setUp(int a) {
     for (int i = 0;  i < 9; i++) {
-     for (int j = 0; j < 9; j++) {
-      currentPreToSolve[i][j] = currentPreSolve[i][j];
-     }
+     System.arraycopy(currentPreSolve[i], 0, currentPreToSolve[i], 0, 9);
     }
     SudokuSolver.solveBoard(currentPreToSolve,a);
 
    }
 
    public static TextField[][] grid() {
-     TextField[][] myTextFields = {
-             {text00,text10,text20,text30,text40,text50,text60,text70,text80},
-             {text01,text11,text21,text31,text41,text51,text61,text71,text81},
-             {text02,text12,text22,text32,text42,text52,text62,text72,text82},
-             {text03,text13,text23,text33,text43,text53,text63,text73,text83},
-             {text04,text14,text24,text34,text44,text54,text64,text74,text84},
-             {text05,text15,text25,text35,text45,text55,text65,text75,text85},
-             {text06,text16,text26,text36,text46,text56,text66,text76,text86},
-             {text07,text17,text27,text37,text47,text57,text67,text77,text87},
-             {text08,text18,text28,text38,text48,text58,text68,text78,text88},
-     };
 
-     return myTextFields;
+    return new TextField[][]{
+            {text00,text10,text20,text30,text40,text50,text60,text70,text80},
+            {text01,text11,text21,text31,text41,text51,text61,text71,text81},
+            {text02,text12,text22,text32,text42,text52,text62,text72,text82},
+            {text03,text13,text23,text33,text43,text53,text63,text73,text83},
+            {text04,text14,text24,text34,text44,text54,text64,text74,text84},
+            {text05,text15,text25,text35,text45,text55,text65,text75,text85},
+            {text06,text16,text26,text36,text46,text56,text66,text76,text86},
+            {text07,text17,text27,text37,text47,text57,text67,text77,text87},
+            {text08,text18,text28,text38,text48,text58,text68,text78,text88},
+    };
    }
 
 }

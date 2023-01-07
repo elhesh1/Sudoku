@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="Everything but medium and button set up done.">
+    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="Everything is set up and working. Still have to do a bit of cleaning.&#10;Before Changing array setups">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SudokuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SudokuMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SudokuSolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,13 +93,22 @@
       <option name="project" value="LOCAL" />
       <updated>1672992784764</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Everything is set up and working. Still have to do a bit of cleaning.">
+      <created>1673045293237</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673045293237</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Just a casual commit. I made easy solver - slow and quick all work." />
     <MESSAGE value="Just a casual commit. I made easy solver - slow and quick all work. Trying to commit to GitHub" />
     <MESSAGE value="Everything but medium and button set up done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything but medium and button set up done." />
+    <MESSAGE value="Everything is set up and working. Still have to do a bit of cleaning." />
+    <MESSAGE value="Everything is set up and working. Still have to do a bit of cleaning.&#10;Before Changing array setups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything is set up and working. Still have to do a bit of cleaning.&#10;Before Changing array setups" />
   </component>
 </project>

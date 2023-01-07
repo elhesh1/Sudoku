@@ -7,8 +7,8 @@ public class SudokuMaker {
     SudokuMaker(int N, int K) {
         this.N = N;
         this.K = K;
-        Double SRNd = Math.sqrt(N);
-        SRN = SRNd.intValue();
+        double SRNd = Math.sqrt(N);
+        SRN = (int) SRNd;
         mat = new int[N][N];
     }
 
@@ -87,7 +87,7 @@ public class SudokuMaker {
             }
         }
         else if ( i < N - SRN) {
-            if (j==(int)(i/SRN)*SRN) {
+            if (j== (i/SRN) *SRN) {
                 j = j + SRN;
             }
         }
@@ -123,15 +123,6 @@ public class SudokuMaker {
                 count--;
                 mat[i][j] = 0;
             }
-        }
-    }
-
-    public void printSudoku() {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                System.out.print(mat[i][j] + " ");
-            }
-            System.out.println();
         }
     }
 
