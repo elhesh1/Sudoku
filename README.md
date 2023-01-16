@@ -3,5 +3,4 @@ Sudoku project in Java. I used IntelliJ
 
 Sudoku:
 
-<img width="490" alt="Screenshot_20230116_013930" src="https://user-images.githubusercontent.com/95258969/212755048-82bcdb79-aee6-4f1f-ace0-de31278f105a.png">
-
+<img width="491" alt="Screenshot_20230116_014419" src="https://user-images.githubusercontent.com/95258969/212755298-ebcb26f5-8533-43c6-bee5-a6efbbec34aa.png">
