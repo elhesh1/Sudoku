@@ -1,5 +1,5 @@
 # Sudoku
-Sudoku project in Java. I used IntelliJ. This product lets the user play Sudoku or input their own to be solved. It can randomly generate a soduko of one of three difficulties.
+Sudoku project in Java. I used IntelliJ. This product lets the user play Sudoku or input their own to be solved. It can randomly generate a soduko of one of three difficulties. 
 
 Sudoku:
 
