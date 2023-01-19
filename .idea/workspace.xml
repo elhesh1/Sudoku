@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="Added Lambda Functions">
+    <list default="true" id="336dec97-f095-44aa-a1cc-c0cb37e0ed0f" name="Changes" comment="Cleaned up 2 redundant functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SudokuMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SudokuMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SudokuSolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673057089127</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cleaned up 2 redundant functions">
+      <created>1673063309072</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673063309072</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -117,6 +122,7 @@
     <MESSAGE value="Everything is set up and working. Still have to do a bit of cleaning." />
     <MESSAGE value="Everything is set up and working. Still have to do a bit of cleaning.&#10;Before Changing array setups" />
     <MESSAGE value="Added Lambda Functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Lambda Functions" />
+    <MESSAGE value="Cleaned up 2 redundant functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up 2 redundant functions" />
   </component>
 </project>

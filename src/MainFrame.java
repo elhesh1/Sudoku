@@ -11,7 +11,7 @@ public class MainFrame extends JFrame {
    public static TextField checker;
 
 
-    private static TextField text00;
+    private static TextField text00; // not sure how to condense all these
     private static TextField text10;
     private static TextField text20;
     private static TextField text01;
@@ -219,202 +219,184 @@ public class MainFrame extends JFrame {
 
      //This should be how I can get to see all the cells
 
-     JPanel panelll = new JPanel();
-     panelll.setOpaque(false);
-     panelll.setLayout(new GridLayout(3, 3, 3, 3));
-     panelll.setBounds(5, 5, 150, 150);
-     text00 = new TextField(10);
-     panelll.add(text00);
-     text10 = new TextField(10);
-     panelll.add(text10);
-     text20 = new TextField(10);
-     panelll.add(text20);
-     text01 = new TextField(10);
-     panelll.add(text01);
-     text11 = new TextField(10);
-     panelll.add(text11);
-     text21 = new TextField(10);
-     panelll.add(text21);
-     text02 = new TextField(10);
-     panelll.add(text02);
-     text12 = new TextField(10);
-     panelll.add(text12);
-     text22 = new TextField(10);
-     panelll.add(text22);
-     frame.add(panelll);
 
-     JPanel panellll = new JPanel();
-     panellll.setOpaque(false);
-     panellll.setLayout(new GridLayout(3, 3, 3, 3));
-     panellll.setBounds(5, 160, 150, 150);
-     text03 = new TextField(10);
-     panellll.add(text03);
-     text13 = new TextField(10);
-     panellll.add(text13);
-     text23 = new TextField(10);
-     panellll.add(text23);
-     text04 = new TextField(10);
-     panellll.add(text04);
-     text14 = new TextField(10);
-     panellll.add(text14);
-     text24 = new TextField(10);
-     panellll.add(text24);
-     text05 = new TextField(10);
-     panellll.add(text05);
-     text15 = new TextField(10);
-     panellll.add(text15);
-     text25 = new TextField(10);
-     panellll.add(text25);
-     frame.add(panellll);
-
-     JPanel panelllll = new JPanel();
-     panelllll.setOpaque(false);
-     panelllll.setLayout(new GridLayout(3, 3, 3, 3));
-     panelllll.setBounds(5, 315, 150, 150);
-     text06 = new TextField(10);
-     panelllll.add(text06);
-     text16 = new TextField(10);
-     panelllll.add(text16);
-     text26 = new TextField(10);
-     panelllll.add(text26);
-     text07 = new TextField(10);
-     panelllll.add(text07);
-     text17 = new TextField(10);
-     panelllll.add(text17);
-     text27 = new TextField(10);
-     panelllll.add(text27);
-     text08 = new TextField(10);
-     panelllll.add(text08);
-     text18 = new TextField(10);
-     panelllll.add(text18);
-     text28 = new TextField(10);
-     panelllll.add(text28);
-     frame.add(panelllll);
-
-     JPanel panellllll = new JPanel();
-     panellllll.setOpaque(false);
-     panellllll.setLayout(new GridLayout(3, 3, 3, 3));
-     panellllll.setBounds(160, 5, 150, 150);
-     text30 = new TextField(10);
-     panellllll.add(text30);
-     text40 = new TextField(10);
-     panellllll.add(text40);
-     text50 = new TextField(10);
-     panellllll.add(text50);
-     text31 = new TextField(10);
-     panellllll.add(text31);
-     text41 = new TextField(10);
-     panellllll.add(text41);
-     text51 = new TextField(10);
-     panellllll.add(text51);
-     text32 = new TextField(10);
-     panellllll.add(text32);
-     text42 = new TextField(10);
-     panellllll.add(text42);
-     text52 = new TextField(10);
-     panellllll.add(text52);
-     frame.add(panellllll);
-
-     JPanel panelllllll = new JPanel();
-     panelllllll.setOpaque(false);
-     panelllllll.setLayout(new GridLayout(3, 3, 3, 3));
-     panelllllll.setBounds(160, 160, 150, 150);
-     text33 = new TextField(10);
-     panelllllll.add(text33);
-     text43 = new TextField(10);
-     panelllllll.add(text43);
-     text53 = new TextField(10);
-     panelllllll.add(text53);
-     text34 = new TextField(10);
-     panelllllll.add(text34);
-     text44 = new TextField(10);
-     panelllllll.add(text44);
-     text54 = new TextField(10);
-     panelllllll.add(text54);
-     text35 = new TextField(10);
-     panelllllll.add(text35);
-     text45 = new TextField(10);
-     panelllllll.add(text45);
-     text55 = new TextField(10);
-     panelllllll.add(text55);
-     frame.add(panelllllll);
-
-     JPanel panellllllll = new JPanel();
-     panellllllll.setOpaque(false);
-     panellllllll.setLayout(new GridLayout(3, 3, 3, 3));
-     panellllllll.setBounds(160, 315, 150, 150);
-     text36 = new TextField(10);
-     panellllllll.add(text36);
-     text46 = new TextField(10);
-     panellllllll.add(text46);
-     text56 = new TextField(10);
-     panellllllll.add(text56);
-     text37 = new TextField(10);
-     panellllllll.add(text37);
-     text47 = new TextField(10);
-     panellllllll.add(text47);
-     text57 = new TextField(10);
-     panellllllll.add(text57);
-     text38 = new TextField(10);
-     panellllllll.add(text38);
-     text48 = new TextField(10);
-     panellllllll.add(text48);
-     text58 = new TextField(10);
-     panellllllll.add(text58);
-     frame.add(panellllllll);
-
-     JPanel panelllllllll = new JPanel();
-     panelllllllll.setOpaque(false);
-     panelllllllll.setLayout(new GridLayout(3, 3, 3, 3));
-     panelllllllll.setBounds(315, 5, 150, 150);
-     text60 = new TextField(10);
-     panelllllllll.add(text60);
-     text70 = new TextField(10);
-     panelllllllll.add(text70);
-     text80 = new TextField(10);
-     panelllllllll.add(text80);
-     text61 = new TextField(10);
-     panelllllllll.add(text61);
-     text71 = new TextField(10);
-     panelllllllll.add(text71);
-     text81 = new TextField(10);
-     panelllllllll.add(text81);
-     text62 = new TextField(10);
-     panelllllllll.add(text62);
-     text72 = new TextField(10);
-     panelllllllll.add(text72);
-     text82 = new TextField(10);
-     panelllllllll.add(text82);
-     frame.add(panelllllllll);
-
-     JPanel panellllllllll = new JPanel();
-     panellllllllll.setOpaque(false);
-     panellllllllll.setLayout(new GridLayout(3, 3, 3, 3));
-     panellllllllll.setBounds(315, 160, 150, 150);
-     text63 = new TextField(10);
-     panellllllllll.add(text63);
-     text73 = new TextField(10);
-     panellllllllll.add(text73);
-     text83 = new TextField(10);
-     panellllllllll.add(text83);
-     text64 = new TextField(10);
-     panellllllllll.add(text64);
-     text74 = new TextField(10);
-     panellllllllll.add(text74);
-     text84 = new TextField(10);
-     panellllllllll.add(text84);
-     text65 = new TextField(10);
-     panellllllllll.add(text65);
-     text75 = new TextField(10);
-     panellllllllll.add(text75);
-     text85 = new TextField(10);
-     panellllllllll.add(text85);
-     frame.add(panellllllllll);
-
+     JPanel panel1 = new JPanel();
+     JPanel panel2 = new JPanel();
+     JPanel panel3 = new JPanel();
+     JPanel panel4 = new JPanel();
+     JPanel panel5 = new JPanel();
+     JPanel panel6 = new JPanel();
+     JPanel panel7 = new JPanel();
+     JPanel panel8 = new JPanel();
      JPanel panel9 = new JPanel();
-     panel9.setOpaque(false);
-     panel9.setLayout(new GridLayout(3, 3, 3, 3));
-     panel9.setBounds(315, 315, 150, 150);
+
+    JPanel[][] panelsCreate = {
+            {panel1,panel4,panel7},
+            {panel2,panel5,panel8},
+            {panel3,panel6,panel9},
+
+    };
+     for (int i = 0; i<3; i++) {
+       for (int j = 0; j<3; j++) {
+        panelsCreate[j][i].setOpaque(false);
+        panelsCreate[j][i].setLayout(new GridLayout(3,3,3,3));
+        panelsCreate[j][i].setBounds(5 + 155*i,5+155*j,150,150);
+        frame.add(panelsCreate[j][i]);
+       }
+     }
+
+
+
+     text00 = new TextField(10);
+     text10 = new TextField(10);
+     text20 = new TextField(10);
+     text01 = new TextField(10);
+     text11 = new TextField(10);
+     text21 = new TextField(10);
+     text02 = new TextField(10);
+     text12 = new TextField(10);
+     text22 = new TextField(10);
+     TextField[] firstSquare = {text00,text10,text20,text01,text11,text21,text02,text12,text22};
+     for (TextField x: firstSquare) {
+      panel1.add(x);
+     }
+
+
+     text03 = new TextField(10);
+     panel2.add(text03);
+     text13 = new TextField(10);
+     panel2.add(text13);
+     text23 = new TextField(10);
+     panel2.add(text23);
+     text04 = new TextField(10);
+     panel2.add(text04);
+     text14 = new TextField(10);
+     panel2.add(text14);
+     text24 = new TextField(10);
+     panel2.add(text24);
+     text05 = new TextField(10);
+     panel2.add(text05);
+     text15 = new TextField(10);
+     panel2.add(text15);
+     text25 = new TextField(10);
+     panel2.add(text25);
+     frame.add(panel2);
+
+
+     text06 = new TextField(10);
+     panel3.add(text06);
+     text16 = new TextField(10);
+     panel3.add(text16);
+     text26 = new TextField(10);
+     panel3.add(text26);
+     text07 = new TextField(10);
+     panel3.add(text07);
+     text17 = new TextField(10);
+     panel3.add(text17);
+     text27 = new TextField(10);
+     panel3.add(text27);
+     text08 = new TextField(10);
+     panel3.add(text08);
+     text18 = new TextField(10);
+     panel3.add(text18);
+     text28 = new TextField(10);
+     panel3.add(text28);
+
+     text30 = new TextField(10);
+     panel4.add(text30);
+     text40 = new TextField(10);
+     panel4.add(text40);
+     text50 = new TextField(10);
+     panel4.add(text50);
+     text31 = new TextField(10);
+     panel4.add(text31);
+     text41 = new TextField(10);
+     panel4.add(text41);
+     text51 = new TextField(10);
+     panel4.add(text51);
+     text32 = new TextField(10);
+     panel4.add(text32);
+     text42 = new TextField(10);
+     panel4.add(text42);
+     text52 = new TextField(10);
+     panel4.add(text52);
+
+     text33 = new TextField(10);
+     panel5.add(text33);
+     text43 = new TextField(10);
+     panel5.add(text43);
+     text53 = new TextField(10);
+     panel5.add(text53);
+     text34 = new TextField(10);
+     panel5.add(text34);
+     text44 = new TextField(10);
+     panel5.add(text44);
+     text54 = new TextField(10);
+     panel5.add(text54);
+     text35 = new TextField(10);
+     panel5.add(text35);
+     text45 = new TextField(10);
+     panel5.add(text45);
+     text55 = new TextField(10);
+     panel5.add(text55);
+
+     text36 = new TextField(10);
+     panel6.add(text36);
+     text46 = new TextField(10);
+     panel6.add(text46);
+     text56 = new TextField(10);
+     panel6.add(text56);
+     text37 = new TextField(10);
+     panel6.add(text37);
+     text47 = new TextField(10);
+     panel6.add(text47);
+     text57 = new TextField(10);
+     panel6.add(text57);
+     text38 = new TextField(10);
+     panel6.add(text38);
+     text48 = new TextField(10);
+     panel6.add(text48);
+     text58 = new TextField(10);
+     panel6.add(text58);
+
+     text60 = new TextField(10);
+     panel7.add(text60);
+     text70 = new TextField(10);
+     panel7.add(text70);
+     text80 = new TextField(10);
+     panel7.add(text80);
+     text61 = new TextField(10);
+     panel7.add(text61);
+     text71 = new TextField(10);
+     panel7.add(text71);
+     text81 = new TextField(10);
+     panel7.add(text81);
+     text62 = new TextField(10);
+     panel7.add(text62);
+     text72 = new TextField(10);
+     panel7.add(text72);
+     text82 = new TextField(10);
+     panel7.add(text82);
+
+     text63 = new TextField(10);
+     panel8.add(text63);
+     text73 = new TextField(10);
+     panel8.add(text73);
+     text83 = new TextField(10);
+     panel8.add(text83);
+     text64 = new TextField(10);
+     panel8.add(text64);
+     text74 = new TextField(10);
+     panel8.add(text74);
+     text84 = new TextField(10);
+     panel8.add(text84);
+     text65 = new TextField(10);
+     panel8.add(text65);
+     text75 = new TextField(10);
+     panel8.add(text75);
+     text85 = new TextField(10);
+     panel8.add(text85);
+
      text66 = new TextField(10);
      text76 = new TextField(10);
      text86 = new TextField(10);
@@ -424,13 +406,11 @@ public class MainFrame extends JFrame {
      text68 = new TextField(10);
      text78 = new TextField(10);
      text88 = new TextField(10);
-
      TextField[] ninthSquare = {text66,text76,text86,text67,text77,text87,text68,text78,text88};
      for (TextField x: ninthSquare) {
-    //  x = new TextField(10);
       panel9.add(x);
     }
-    frame.add(panel9);
+
 
 
      TextField[][] textFormat = grid();
@@ -557,8 +537,9 @@ public class MainFrame extends JFrame {
 
    }
 
-   public static TextField[][] grid() {
 
+
+   public static TextField[][] grid() {
     return new TextField[][]{
             {text00,text10,text20,text30,text40,text50,text60,text70,text80},
             {text01,text11,text21,text31,text41,text51,text61,text71,text81},
