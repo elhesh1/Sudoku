@@ -10,7 +10,6 @@ public class MainFrame extends JFrame {
    private static final int[][] currentPreToSolve = new int[9][9];
    public static TextField checker;
 
-
     private static TextField text00; // not sure how to condense all these
     private static TextField text10;
     private static TextField text20;
@@ -217,8 +216,6 @@ public class MainFrame extends JFrame {
      button.addActionListener(e -> emptyTheBoard());
      greePanel.add(button);
 
-     //This should be how I can get to see all the cells
-
 
      JPanel panel1 = new JPanel();
      JPanel panel2 = new JPanel();
@@ -244,8 +241,6 @@ public class MainFrame extends JFrame {
         frame.add(panelsCreate[j][i]);
        }
      }
-
-
 
      text00 = new TextField(10);
      text10 = new TextField(10);
@@ -411,8 +406,6 @@ public class MainFrame extends JFrame {
       panel9.add(x);
     }
 
-
-
      TextField[][] textFormat = grid();
      for (int i = 0; i < 9; i++) {
       for (int j = 0; j < 9; j++) {
@@ -420,7 +413,6 @@ public class MainFrame extends JFrame {
         textFormat[i][j].setPreferredSize(new Dimension(10,10));
       }
      }
-
 
      for (int i = 0; i < 3; i++) {  // Easily change colors of 3x3s
       for (int j = 0; j < 3; j++) {
@@ -434,9 +426,7 @@ public class MainFrame extends JFrame {
      frame.add(greePanel);
      frame.add(Outline);
      frame.setVisible(true);
-
      setUpEasyy(50); // Sets up initial board
-
     }
 
 
@@ -500,9 +490,7 @@ public class MainFrame extends JFrame {
      myTextFields[i][j].setText("");
      myTextFields[i][j].setEditable(true);
     }
-
    }
-
   }
   currentBoard = tester;
   preSolveToTester();
@@ -537,8 +525,6 @@ public class MainFrame extends JFrame {
 
    }
 
-
-
    public static TextField[][] grid() {
     return new TextField[][]{
             {text00,text10,text20,text30,text40,text50,text60,text70,text80},
@@ -552,5 +538,4 @@ public class MainFrame extends JFrame {
             {text08,text18,text28,text38,text48,text58,text68,text78,text88},
     };
    }
-
 }

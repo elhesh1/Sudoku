@@ -2,9 +2,6 @@ public class SudokuSolver {
 
     private static final int GRID_SIZE = 9;
 
-    public static void main(String[] args) {
-    }
-
     public static void printBoard(int[][] board) {
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int column = 0; column < GRID_SIZE; column ++) {
@@ -49,13 +46,10 @@ public class SudokuSolver {
         return !isNumberInRow(board, number, row) &&
                 !isNumberInColumn(board, number, col) &&
                 !isNumberInBox(board, number, row, col);
-
-
     }
 
     public static boolean solveBoard(int[][] board,int a) {
         MainFrame.checker.setText("");
-
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int column = 0; column < GRID_SIZE; column++) {
                 if (board[row][column] == 0) {
@@ -85,8 +79,6 @@ public class SudokuSolver {
 
 
     public static boolean solveBoardFast(int[][] board) {
-       // MainFrame.checker.setText("Solved!!!!!");
-
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int column = 0; column < GRID_SIZE; column++) {
                 if (board[row][column] == 0) {
@@ -98,8 +90,6 @@ public class SudokuSolver {
                             }
                             else {
                                 board[row][column] = 0;
-
-
                             }
                         }
                     }
